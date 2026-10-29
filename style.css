@@ -4,12 +4,20 @@ body {
   min-height: 100vh;
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  background: #1e3c72;
+}
+
+/* Colorful backdrop behind the glass, pinned to the viewport */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
     radial-gradient(circle at 15% 15%, #5ac8fa 0%, transparent 45%),
     radial-gradient(circle at 85% 25%, #ff9a9e 0%, transparent 40%),
     radial-gradient(circle at 50% 95%, #7d5fff 0%, transparent 50%),
     linear-gradient(160deg, #1e3c72, #2a5298);
-  background-attachment: fixed;
 }
 
 .app {
